@@ -1,7 +1,4 @@
-var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
-var User = require('./models/user');
-
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+module.exports = {
+    'secretKey': '12345-67890-09876-54321',
+    'mongoUrl' : 'mongodb://localhost:27017/conFusion'
+}
